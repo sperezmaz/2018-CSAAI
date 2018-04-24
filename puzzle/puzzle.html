@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Puzzle</title>
+    <h3 style="color:white"> <strong>PUZZLE</strong></h3>
+
+    <style>
+    table {
+      border-collapse: separate;
+      border-spacing: 2px;
+    }
+    </style>
+  </head>
+
+
+  <body onload="main()" style="background:url('fondo.jpeg')">
+
+    <table align="center">
+      <tr>
+          <td><img id="carrousel1" onclick="cambiar(this)" src="imagen0/imagen0.jpg" height="100px" width="150px"></td>
+          <td><img id="carrousel2" onclick="cambiar(this)" src="imagen1/imagen1.jpg" height="100px" width="150px"></td>
+          <td><img id="carrousel3" onclick="cambiar(this)" src="imagen2/imagen2.jpg" height="100px" width="150px"></td>
+      </tr>
+    </table>
+
+    <table align="center" style="margin-top:105px">
+      <tr>
+        <td><img id="cuad1" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad2" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad3" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+      </tr>
+      <tr>
+        <td><img id="cuad4" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad5" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad6" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+      </tr>
+      <tr>
+        <td><img id="cuad7" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad8" onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+        <td><img id="cuad9"  onclick="intercamb_pieza(this)" src="vacio.jpg" height="125px" width="200px"></td>
+      </tr>
+    </table>
+
+    <div style="position: absolute; left: 42%; top: 17%;" >
+    <p align="center" id="temporizador" style="color: black; font-size:40px"></p>
+    </div>
+
+    <script src="puzzle.js"></script>
+  </body>
+</html>
