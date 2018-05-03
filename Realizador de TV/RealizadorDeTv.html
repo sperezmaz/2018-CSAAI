@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script src="RealizadorDeTv.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Realizador de TV</title>
+  <h1 align="center" style="color:Black"> <strong>Realizador de TV</strong> </h1>
+  <style>
+  table, td {
+    border: 0.2px solid black;
+    border-collapse: collapse;
+  }
+</style>
+</head>
+<body>
+<div align="center">
+
+  <table style="position: absolute; left: 5%; top: 12%; text-align: center;">
+        <tr>
+          <td>
+            <video id="camara1" onmouseover="activa_audio(this)" onmouseout="silenciar_audio(this)"
+             width="320" height="240" controls  autoplay loop muted>
+              <source src="prueba1.mp4" type="video/mp4">
+              Your browser does not support the video mp4.
+            </video>
+          </td>
+          <td>
+            <video id="camara2" onmouseover="activa_audio(this)" onmouseout="silenciar_audio(this)"
+             width="320" height="240" controls autoplay loop muted>
+              <source src="prueba2.mp4" type="video/mp4">
+              Your browser does not support the video mp4.
+            </video>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <video id="camara3" onmouseover="activa_audio(this)" onmouseout="silenciar_audio(this)"
+             width="320" height="240" controls autoplay loop muted>
+              <source src="prueba3.mp4" type="video/mp4">
+              Your browser does not support the video mp4.
+            </video>
+          </td>
+          <td>
+            <video id="camara4" onmouseover="activa_audio(this)" onmouseout="silenciar_audio(this)"
+             width="320" height="240" controls autoplay loop muted>
+              <source src="prueba4.mp4" type="video/mp4">
+              Your browser does not support the video mp4.
+            </video>
+          </td>
+        </tr>
+  </table>
+</div>
+
+<div style="position: absolute; left: 60%; top: 68%; text-align: center;">
+  Comienzo bucle en segundos:<br>
+  <input type="range" min="0" max="240" id="inicio">
+  <p id="inicio_mostrar" class="right">120</p>
+  Terminar bucle en segundos:<br>
+  <input type="range" min="0" max="240" id="fin">
+  <p id="fin_mostrar" class="right">120</p>
+</div>
+
+<div style="position: absolute; left: 78%; top: 78%; text-align: center;">
+  Realizar el bucle:
+  <input type="submit" value="INICIAR" onclick="bucle(this)">
+</div>
+
+<div style="position: absolute; left: 60%; top: 8%; width: 5%; text-align: center;">
+  <video id="video_principal" width="500" height="380" muted controls >
+    <source src="prueba3.mp4" type="video/mp4">
+    Your browser does not support the video mp4.
+  </video>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <button id="1" onclick="cambiar_video(this)">Cámara 1</button>
+      </td>
+      <td>
+        <button id="2" onclick="cambiar_video(this)">Cámara 2</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="3" onclick="cambiar_video(this)">Cámara 3</button>
+      </td>
+      <td>
+        <button id="4" onclick="cambiar_video(this)">Cámara 4</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="position: absolute; left: 75%; top: 8%; text-align: center;" class="down" >
+    <font face = "sans-serif" id="reloj" size="8" color="red"></font>
+</div>
+
+</body>
+</html>
