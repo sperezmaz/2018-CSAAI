@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+    <script src="comecocos.js"></script>
+
+    <head>
+      <meta charset="utf-8" />
+      <title>Juego del Comecocos</title>
+      <h1 style="color:yellow"> <strong>COMECOCOS</strong> </h1>
+      <style type="text/css">
+      canvas {
+        border: 3px solid white;
+        background: #050506;
+        display: inline;
+       }
+
+      #fondo {
+        background: url(fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: 2000px 1045px;
+      }
+      #div1 {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+      </style>
+
+    </head>
+
+  <body  id="fondo" text="blue">
+
+   <div style="position: absolute; left: 80%; top: 20%; width: 5%; text-align: center;">
+     <img src="iniciar.png" width="200" height="50" onclick="main()">
+     <img id="boton_pausar" src="pausar.png" width="200" height="50" onclick="pausar(this)">
+   </div >
+
+    <div style="position: absolute; left: 32%; top: 2%; text-align: center;  z-index: -1;" >
+    <canvas id="example" width="477" height="580" > </canvas> </div>
+
+
+    <p>Arrastra el color del pacman al cuadrado:</p>
+    <div id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div>
+    <img id="drag1" src="comecocosAmarillo.png"  draggable="true" ondragstart="drag(event)" width="40" height="40">
+    <img id="drag2" src="comecocosRosa.png"  draggable="true" ondragstart="drag(event)" width="40" height="40">
+    <img id="drag3" src="comecocosVerde.png"  draggable="true" ondragstart="drag(event)" width="40" height="40">
+    </div>
+
+    <div style="position: absolute; left: 80%; top: 7%;" >
+    <p align="center" id="temporizador" style="color: red; font-size:30px"></p>
+    </div>
+
+    <div style="position: absolute; left: 70%; top: 55%;" >
+    <p align="center" id="record" style="color: green; font-size:30px"></p>
+    </div>
+
+    <div style="position: absolute; left: 70%; top: 40%;" >
+    <p align="center" id="puntuacion" style="color: green; font-size:30px"></p>
+    </div>
+
+    <audio id="comer" src="pacman.mp3" autoplay loop muted></audio>
+    <audio id="comer_fruta" src="comer_fruta.mp3" ></audio>
+
+  </body>
+  </html>
